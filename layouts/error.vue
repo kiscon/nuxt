@@ -6,8 +6,8 @@
       <p><nuxt-link class="back" to="/">返回首页</nuxt-link></p>
     </div>
     <div class="serve" v-else>
-      <!--<h2>亲，服务异常，请稍后~</h2>-->
-      <h2 v-text="error.message"></h2>
+      <h2>亲，服务异常，请稍后~</h2>
+      <!--<h2 v-text="error.message"></h2>-->
     </div>
     <!--<div class="error" v-else>-->
     <!--<h2>请联系技术人员~</h2>-->

@@ -12,12 +12,15 @@
         <nuxt-link :to="{name:'news',params:{newsId:3306}}">NEWS</nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="{name:'asyncData',params:{id:'wuuef'}}">asyncData</nuxt-link>
+        <nuxt-link :to="{name:'asyncData'}">asyncData</nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="{name:'userInfo',params:{id:'a6893'}}">userInfo</nuxt-link>
+        <!--<nuxt-link :to="{name:'userInfo',params:{id:'a6893'}}">userInfo</nuxt-link>-->
+        <nuxt-link :to="{name:'userInfo'}">userInfo</nuxt-link>
       </li>
-
+      <li>
+        <nuxt-link :to="{name:'todos'}">todos</nuxt-link>
+      </li>
     </ul>
   </section>
 </template>

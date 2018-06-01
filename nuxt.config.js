@@ -1,7 +1,7 @@
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'nuxt',
     meta: [
@@ -14,8 +14,8 @@ module.exports = {
     ]
   },
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: '#3B8070' },
   css: [
     '~assets/css/base.css',
@@ -23,20 +23,48 @@ module.exports = {
     'element-ui/lib/theme-chalk/index.css'
   ],
   /*
-  * 配置插件
-  * 备注：ssr: false 变量来配置插件只从客户端还是服务端运行
-  * */
+   * 配置插件
+   * 备注：ssr: false 变量来配置插件只从客户端还是服务端运行
+   * */
   plugins: [
     { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
     { src: '~plugins/element-ui.js', ssr: true }
   ],
+
   /*
-  ** Build configuration
-  */
+   * 配置 Nuxt.js 应用生成静态站点的具体方式
+   * https://zh.nuxtjs.org/api/configuration-generate
+   */
+  generate: {
+    dir: "server/public",
+    minify: {
+      collapseBooleanAttributes: true,
+      collapseWhitespace: false,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeAttributeQuotes: false,
+      removeComments: false,
+      removeEmptyAttributes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: false,
+      removeStyleLinkTypeAttributes: false,
+      removeTagWhitespace: false,
+      sortAttributes: true,
+      sortClassName: false,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    }
+  },
+  /*
+   ** Build configuration
+   */
   build: {
     vendor: [
       'axios',
-      'element-ui',
+      '~/plugins/element-ui',
       '~/plugins/vue-notifications'
     ],
     loader: [
@@ -66,8 +94,8 @@ module.exports = {
       }
     ],
     /*
-    ** Run ESLint on save
-    */
+     ** Run ESLint on save
+     */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
