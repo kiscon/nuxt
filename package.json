@@ -14,7 +14,7 @@
   },
   "config": {
     "nuxt": {
-      "host": "0.0.0.0",
+      "host": "localhost",
       "port": "8081"
     }
   },
@@ -32,12 +32,14 @@
     "vue-quill-editor": "^3.0.6"
   },
   "devDependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/proxy": "^1.2.4",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",

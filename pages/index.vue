@@ -1,17 +1,17 @@
 <template>
   <section class="container">
-
     <ul>
       <li>
          <nuxt-link :to="{name:'index'}">home</nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="{name:'about'}">ABOUT</nuxt-link>
+        <nuxt-link :to="{name:'about'}">about</nuxt-link>
       </li>
       <li>
         <nuxt-link :to="{name:'news',params:{newsId:3306}}">NEWS</nuxt-link>
       </li>
       <li>
+        <!--<nuxt-link :to="{name:'asyncData',params:{id:'wuuef'}}">asyncData</nuxt-link>-->
         <nuxt-link :to="{name:'asyncData'}">asyncData</nuxt-link>
       </li>
       <li>

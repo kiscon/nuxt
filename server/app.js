@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
-app.use('/api/product', productSve);
+app.use('/api/productSve', productSve);
 
 
 

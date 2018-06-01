@@ -30,7 +30,6 @@ module.exports = {
     { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
     { src: '~plugins/element-ui.js', ssr: true }
   ],
-
   /*
    * 配置 Nuxt.js 应用生成静态站点的具体方式
    * https://zh.nuxtjs.org/api/configuration-generate
@@ -58,6 +57,17 @@ module.exports = {
       useShortDoctype: true
     }
   },
+  /*
+   * 配置 Nuxt.js 配置代理到node层
+   * https://segmentfault.com/q/1010000010676106
+   */
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  proxy: [
+    ['/api', { target: 'http://localhost:3001' }]
+  ],
   /*
    ** Build configuration
    */
