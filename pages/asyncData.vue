@@ -14,9 +14,15 @@
               name:'hello World',
           }
       },
-      async asyncData() {
+      async asyncData({error}) {
+        try {
           let {data} = await axios.get(`https://api.myjson.com/bins/wuuef`)
-          return {info: data}
+          return {
+              info: data
+          }
+        } catch (err) {
+          error({ statusCode: 404, message: 'Post not found' })
+        }
       },
       created () {
           console.log(this.$route.params)
