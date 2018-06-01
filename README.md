@@ -37,7 +37,6 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 |-- .gitignore                       // 配置git不上传的文件
 |-- nuxt.config.json                 // 用于组织Nuxt.js应用的个性化配置，已覆盖默认配置
 |-- package-lock.json                // npm自动生成，用于帮助package的统一性设置的，yarn也有相同的操作
-|-- package-lock.json                // npm自动生成，用于帮助package的统一性设置的，yarn也有相同的操作
 |-- package.json                     // npm包管理配置文件
 
 ```
